@@ -54,6 +54,8 @@ When a sine wave is applied:
 * **Pulse Width Variation:** Because the sine wave spends different amounts of time at different voltage levels, the digital outputs have different pulse widths.
 * **Lower Thresholds:** Result in wider digital pulses.
 * **Higher Thresholds:** Result in narrower digital pulses (occurring only at the signal peaks).
+  <img width="440" height="244" alt="image" src="https://github.com/user-attachments/assets/c1ac946b-3072-4e4b-9eb0-8e77e31b8a6a" />
+
 
 ---
 
