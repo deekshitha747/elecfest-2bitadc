@@ -33,7 +33,6 @@ The encoder translates the raw comparator data into a 2-bit binary word:
 ---
 
 ## 4. Signal Reconstruction & Visualization
-To verify the ADC's accuracy, a reconstructed staircase is generated in the LTspice waveform viewer. Because the digital gates are set to `Vhigh=5V`, the following weighted sum expression is used to overlay the digital result on the 5V analog sine wave:
 
 $$\text{Reconstructed Signal} = \frac{(2 \times V(Q_1)) + (1 \times V(Q_0))}{3}$$
 
