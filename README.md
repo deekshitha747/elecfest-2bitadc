@@ -51,7 +51,3 @@ $$\text{Reconstructed Signal} = \frac{(2 \times V(Q_1)) + (1 \times V(Q_0))}{3}$
 
 ---
 
-## 6. Results
-
-
-*The reconstructed blue staircase perfectly tracks the green sinusoidal input, demonstrating successful quantization and priority encoding.*
