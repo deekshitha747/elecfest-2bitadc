@@ -60,7 +60,8 @@ When a sine wave is applied:
 ---
 
 ## 5. Simulation Results
-<img width="1912" height="411" alt="Screenshot 2026-04-23 013048" src="https://github.com/user-attachments/assets/990a7d35-ec06-4e07-a917-bf8ff195327d" />
+<img width="1917" height="420" alt="image" src="https://github.com/user-attachments/assets/9b5043ff-a45e-4241-9aae-639f502ba537" />
+
 
 *Figure 1: 2-bit ADC Staircase output overlaid on the original Sinusoidal input signal.*
 
