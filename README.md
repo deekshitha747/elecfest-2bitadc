@@ -66,3 +66,20 @@ When a sine wave is applied:
 
 ---
 
+## 6. Signal Reconstruction & Visualization Logic
+
+To visualize how the 2-bit ADC sees the analog signal, we reconstruct a single digital staircase from the individual comparator outputs. In the simulation, this is achieved using the following mathematical expression:
+
+$$\text{Reconstructed Signal} = \frac{V(OUT_0) + V(OUT_1) + V(OUT_2)}{3}$$
+
+### How the Reconstruction Works:
+Because each comparator output is a binary signal (either $0V$ or $5V$), simply looking at three separate square waves can be difficult to interpret. By calculating the average of the active digital high states, we create a staircase waveform that tracks the input:
+
+* **Level 0 (000):** When $V_{in} < 1.25V$, all outputs are $0V$. The reconstructed value is $0V$.
+* **Level 1 (001):** When $V_{in}$ exceeds $1.25V$, $OUT_0$ goes High ($5V$). The expression calculates $(5+0+0)/3 = 1.66V$.
+* **Level 2 (011):** When $V_{in}$ exceeds $2.50V$, both $OUT_0$ and $OUT_1$ are High. The expression calculates $(5+5+0)/3 = 3.33V$.
+* **Level 3 (111):** When $V_{in}$ exceeds $3.75V$, all three are High. The expression calculates $(5+5+5)/3 = 5V$.
+
+### Why Divide by 3?
+The division by 3 is a scaling factor. Since our maximum possible digital sum is $15V$ ($3 \times 5V$) and our analog input max is $5V$, dividing by 3 brings the digital staircase into the same vertical scale as the analog sine wave.
+
